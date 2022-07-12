@@ -9,9 +9,32 @@ describe("UnCaptchaService", () => {
     );
   });
 
+  test("Should throw error when private seed is not provided", async () => {
+    try {
+      unCaptchaService = new UnCaptchaService();
+      throw new Error("Did not throw exception");
+    } catch (error) {
+      expect(error).toStrictEqual({
+        message: "Missing or invalid privateSeed param",
+      });
+    }
+  });
+
+  test("Should throw error when captcha is not provided", async () => {
+    try {
+      await unCaptchaService.verify();
+      throw new Error("Did not throw exception");
+    } catch (error) {
+      expect(error).toStrictEqual({
+        message: "Missing or invalid captcha param",
+      });
+    }
+  });
+
   test("Should return correct error status and message with fake data", async () => {
     try {
       await unCaptchaService.verify("fakeCaptcha");
+      throw new Error("Did not throw exception");
     } catch (error) {
       expect(error).toStrictEqual({
         statusCode: 400,
@@ -25,6 +48,7 @@ describe("UnCaptchaService", () => {
       await unCaptchaService.verify(
         "314ae59869ef54ab31e2f2e01d6e27f2daa831ebcf5fa55452bf53c9e0c26263.362e8ec8acdb01c11105c6bc172642267fefc2d87b1f8d8e542b84be53b54d9e.1657479248113"
       );
+      throw new Error("Did not throw exception");
     } catch (error) {
       expect(error).toStrictEqual({
         statusCode: 410,
