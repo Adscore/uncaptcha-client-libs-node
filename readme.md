@@ -16,8 +16,9 @@ Requires NodeJS >=8.0
 4. In NodeJs:
 
 ```js
+const { UnCaptchaService } = require("@adscore/uncaptcha");
+
 try {
-  const { UnCaptchaService } = require("@adscore/uncaptcha");
   const captcha = "<CAPTCHA_FROM_REQUEST>";
   const visitorUserAgent = "<OPTIONAL_VISITOR_USER_AGENT>";
   const visitorIp = "<OPTIONAL_VISITOR_IP>";
