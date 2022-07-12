@@ -2,6 +2,7 @@
   "name": "@adscore/uncaptcha",
   "version": "0.1.0",
   "description": "A simple and free CAPTCHA solution easy to integrate and use by developers and non-developers alike.",
+  "repository": "https://github.com/Adscore/uncaptcha-client-libs-node",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
