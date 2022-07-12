@@ -1,0 +1,24 @@
+{
+  "name": "@adscore/uncaptcha",
+  "version": "0.1.0",
+  "description": "A simple and free CAPTCHA solution easy to integrate and use by developers and non-developers alike.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "fixture": "http-server ./captcha-fixture"
+  },
+  "keywords": [
+    "captcha",
+    "uncaptcha"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.2",
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

@@ -1,0 +1,35 @@
+<html>
+  <head></head>
+  <body style="display: flex; flex-direction: column">
+    <div
+      class="uncaptcha"
+      data-sitekey="D5EF3E9E-C5A7-432E-B362-7E47372201CF"
+    ></div>
+
+    <script
+      src="https://api.uncaptcha.com/sdk.js"
+      type="text/javascript"
+      defer
+      async
+    ></script>
+
+    <button type="button" id="generate">Generate</button>
+    <input type="text" id="captcha" />
+    <script>
+      document.getElementById("generate").addEventListener("click", () => {
+        const captcha =
+          document.getElementsByName("uncaptcha-token")?.[0]?.value;
+
+        if (captcha) {
+          document.getElementById("captcha").value = captcha;
+
+          navigator.clipboard.writeText(captcha).then(function () {
+            alert("Captcha copied to clipboard");
+          });
+        } else {
+          alert("Click on captcha first");
+        }
+      });
+    </script>
+  </body>
+</html>
