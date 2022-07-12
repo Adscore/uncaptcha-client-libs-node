@@ -4,6 +4,8 @@ A simple and free CAPTCHA solution easy to integrate and use by developers and n
 
 ## How to install
 
+Requires NodeJS >=8.0
+
 `npm i @adscore/uncaptcha`
 
 ## How to use
@@ -11,10 +13,11 @@ A simple and free CAPTCHA solution easy to integrate and use by developers and n
 1. Go to uncaptcha https://uncaptcha.com/
 2. Generate private and public seed.
 3. Follow instructions on https://uncaptcha.com/ to implement captcha in the frontend
-4. In node:
+4. In NodeJs:
 
 ```js
 try {
+  const { UnCaptchaService } = require("@adscore/uncaptcha");
   const captcha = "<CAPTCHA_FROM_REQUEST>";
   const visitorUserAgent = "<OPTIONAL_VISITOR_USER_AGENT>";
   const visitorIp = "<OPTIONAL_VISITOR_IP>";
@@ -25,7 +28,7 @@ try {
    * Throws object:
    * {
    *   statusCode: 400,
-   *   message: "Expired Request"
+   *   message: "Invalid Request"
    * }
    */
   console.log(error);
