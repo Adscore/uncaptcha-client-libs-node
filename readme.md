@@ -23,6 +23,7 @@ try {
   const visitorUserAgent = "<OPTIONAL_VISITOR_USER_AGENT>";
   const visitorIp = "<OPTIONAL_VISITOR_IP>";
   const unCaptchaService = new UnCaptchaService("<PRIVATE_SEED>");
+
   await unCaptchaService.verify(captcha, visitorUserAgent, visitorIp);
 } catch (error) {
   /**
