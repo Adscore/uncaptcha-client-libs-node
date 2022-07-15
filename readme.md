@@ -41,7 +41,7 @@ try {
 
 ### Request Failed
 
-Something went wrong on our side, please create a issue in GitHub.
+Something went wrong on our side, please create an issue in GitHub.
 
 ```js
 {
