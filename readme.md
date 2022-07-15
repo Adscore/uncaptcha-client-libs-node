@@ -19,7 +19,8 @@ Requires NodeJS >=8.0
 const { UnCaptchaService } = require("@adscore/uncaptcha");
 
 try {
-  const captcha = "<CAPTCHA_FROM_REQUEST>";
+  // UnCaptcha will add hidden input to the form with name 'uncaptcha-token'
+  const captcha = "<UNCAPTCHA_TOKEN_FROM_REQUEST>";
   const visitorUserAgent = "<OPTIONAL_VISITOR_USER_AGENT>";
   const visitorIp = "<OPTIONAL_VISITOR_IP>";
   const unCaptchaService = new UnCaptchaService("<PRIVATE_SEED>");
